@@ -1,0 +1,43 @@
+<icecast>
+  <location>RadioT</location>
+  <admin>ops@radiot.local</admin>
+  <limits>
+    <clients>500</clients>
+    <sources>2</sources>
+    <queue-size>524288</queue-size>
+    <client-timeout>30</client-timeout>
+    <header-timeout>15</header-timeout>
+    <source-timeout>10</source-timeout>
+    <burst-on-connect>1</burst-on-connect>
+    <burst-size>65535</burst-size>
+  </limits>
+  <authentication>
+    <source-password>{{SOURCE_PASSWORD}}</source-password>
+    <relay-password>{{ADMIN_PASSWORD}}</relay-password>
+    <admin-user>admin</admin-user>
+    <admin-password>{{ADMIN_PASSWORD}}</admin-password>
+  </authentication>
+  <hostname>localhost</hostname>
+  <listen-socket>
+    <port>{{PORT}}</port>
+    <bind-address>{{BIND}}</bind-address>
+  </listen-socket>
+  <http-headers>
+    <header name="Access-Control-Allow-Origin" value="*" />
+    <header name="Access-Control-Allow-Headers" value="Origin, Accept, X-Requested-With, Content-Type, Icy-MetaData" />
+  </http-headers>
+  <fileserve>1</fileserve>
+  <paths>
+    <basedir>{{SHARE}}</basedir>
+    <logdir>{{RUN}}</logdir>
+    <webroot>{{SHARE}}/web</webroot>
+    <adminroot>{{SHARE}}/admin</adminroot>
+    <alias source="/" dest="/status.xsl"/>
+  </paths>
+  <logging>
+    <accesslog>icecast-access.log</accesslog>
+    <errorlog>icecast-error.log</errorlog>
+    <loglevel>3</loglevel>
+  </logging>
+  <security><chroot>0</chroot></security>
+</icecast>

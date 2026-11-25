@@ -1,0 +1,56 @@
+{
+  "name": "radiot",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.34.9",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "test:e2e": "pnpm --filter @radiot/web test:e2e",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "db:generate": "pnpm --filter @radiot/db db:generate",
+    "db:migrate": "pnpm --filter @radiot/db db:migrate",
+    "db:seed": "pnpm --filter @radiot/db db:seed",
+    "prepare": "simple-git-hooks",
+    "fallback:import": "pnpm --filter @radiot/worker fallback:import",
+    "fallback:demo": "bash infra/scripts/make-demo-tracks.sh",
+    "admin:grant": "pnpm --filter @radiot/db admin:grant"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,mjs,cjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml,css}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@next/eslint-plugin-next": "^15.5.29",
+    "@radiot/config": "workspace:*",
+    "@types/node": "^26.6.6",
+    "eslint": "^10.15.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.14.0",
+    "lint-staged": "^17.6.0",
+    "prettier": "^3.10.1",
+    "simple-git-hooks": "^2.14.0",
+    "tsx": "^4.23.15",
+    "turbo": "^2.11.11",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.2",
+    "vitest": "^5.1.0"
+  }
+}

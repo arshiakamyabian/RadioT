@@ -1,0 +1,724 @@
+[
+  {
+    "n": 1,
+    "a": "kid-cudi-can-t-believe-it",
+    "b": "idk-eminem-welcome",
+    "before": {
+      "style": "beatmatch",
+      "syncBeats": 16,
+      "stems": false,
+      "overlapSec": 11.23,
+      "mixStartSec": 158.21,
+      "reasons": [
+        "hard ending, tempos match: beat-matched blend into the next downbeat",
+        "beat-matched over 16 beats"
+      ],
+      "filePeakDbtp": -1,
+      "vocalOverlapSec": 0,
+      "metrics": {
+        "truePeakDb": -1,
+        "beforeLufs": -13.8,
+        "afterLufs": -14.5,
+        "loudnessExcursionLu": 0.33,
+        "quietestDb": -25.1,
+        "beatErrorMs": {
+          "median": 16,
+          "p90": 36.3,
+          "beats": 11
+        },
+        "limiterReductionDb": 0.2,
+        "levelerRangeDb": [-0.2, 0.1]
+      },
+      "checks": {
+        "noClipping": true,
+        "loudness": true,
+        "noGap": true,
+        "beats": true,
+        "vocalsApart": true
+      }
+    },
+    "after": {
+      "style": "beatmatch",
+      "syncBeats": 16,
+      "stems": true,
+      "overlapSec": 11.23,
+      "mixStartSec": 158.2,
+      "reasons": [
+        "AI: A leaves at the phrase end (158.2 s)",
+        "beat-matched over 16 beats (85.0 -> 86.0 BPM)",
+        "A's vocals fade out first",
+        "B's first vocal line is held back until A's voice is gone",
+        "drums enter first, basslines swap on a downbeat"
+      ],
+      "filePeakDbtp": -1.1,
+      "vocalOverlapSec": 0,
+      "metrics": {
+        "truePeakDb": -1.1,
+        "beforeLufs": -13.8,
+        "afterLufs": -14.2,
+        "loudnessExcursionLu": 0.45,
+        "quietestDb": -25.5,
+        "beatErrorMs": {
+          "median": 11.6,
+          "p90": 43.5,
+          "beats": 11
+        },
+        "limiterReductionDb": 0,
+        "levelerRangeDb": [-1.5, 0.5]
+      },
+      "checks": {
+        "noClipping": true,
+        "loudness": true,
+        "noGap": true,
+        "beats": true,
+        "vocalsApart": true
+      }
+    },
+    "renderMs": {
+      "before": 2218,
+      "after": 2481
+    }
+  },
+  {
+    "n": 2,
+    "a": "travis-scott-feat-young-thug-m-i-a-franc",
+    "b": "kid-cudi-joji-clams-casino-type-beat-los",
+    "before": {
+      "style": "tight",
+      "syncBeats": null,
+      "stems": false,
+      "overlapSec": 20,
+      "mixStartSec": 212.25,
+      "reasons": ["B has a quiet intro: it plays under A's last bars and takes over as A ends"],
+      "filePeakDbtp": -3.3,
+      "vocalOverlapSec": 2.4,
+      "metrics": {
+        "truePeakDb": -3.5,
+        "beforeLufs": -13.6,
+        "afterLufs": -21.6,
+        "loudnessExcursionLu": 0.31,
+        "quietestDb": -32.1,
+        "beatErrorMs": null,
+        "limiterReductionDb": 0,
+        "levelerRangeDb": [-0.4, 1.1]
+      },
+      "checks": {
+        "noClipping": true,
+        "loudness": true,
+        "noGap": true,
+        "beats": null,
+        "vocalsApart": false
+      }
+    },
+    "after": {
+      "style": "smooth",
+      "syncBeats": null,
+      "stems": true,
+      "overlapSec": 12,
+      "mixStartSec": 205.64,
+      "reasons": [
+        "AI: A leaves at the start of the chorus (205.6 s)",
+        "tempos too far apart: blended without beat matching",
+        "A's vocals fade out first",
+        "B's first vocal line is held back until A's voice is gone",
+        "B opens quietly: A stays up until B's full level arrives",
+        "basslines swap, drums never double up"
+      ],
+      "filePeakDbtp": -3.1,
+      "vocalOverlapSec": 0,
+      "metrics": {
+        "truePeakDb": -3.2,
+        "beforeLufs": -13.8,
+        "afterLufs": -21.3,
+        "loudnessExcursionLu": 0.31,
+        "quietestDb": -28.4,
+        "beatErrorMs": null,
+        "limiterReductionDb": 0,
+        "levelerRangeDb": [-0.2, 0.3]
+      },
+      "checks": {
+        "noClipping": true,
+        "loudness": true,
+        "noGap": true,
+        "beats": null,
+        "vocalsApart": true
+      }
+    },
+    "renderMs": {
+      "before": 1947,
+      "after": 2021
+    }
+  },
+  {
+    "n": 3,
+    "a": "kid-cudi-joji-clams-casino-type-beat-los",
+    "b": "kodak-black-tunnel-vision",
+    "before": {
+      "style": "smooth",
+      "syncBeats": null,
+      "stems": false,
+      "overlapSec": 20,
+      "mixStartSec": 191.45,
+      "reasons": [
+        "B's quiet intro starts early, under A",
+        "A fades out: long smooth crossfade over its fade"
+      ],
+      "filePeakDbtp": -6.5,
+      "vocalOverlapSec": 0,
+      "metrics": {
+        "truePeakDb": -6.6,
+        "beforeLufs": -18.5,
+        "afterLufs": -29.4,
+        "loudnessExcursionLu": 0.3,
+        "quietestDb": -34.8,
+        "beatErrorMs": null,
+        "limiterReductionDb": 0,
+        "levelerRangeDb": [-0.6, 0]
+      },
+      "checks": {
+        "noClipping": true,
+        "loudness": true,
+        "noGap": true,
+        "beats": null,
+        "vocalsApart": true
+      }
+    },
+    "after": {
+      "style": "smooth",
+      "syncBeats": null,
+      "stems": true,
+      "overlapSec": 12,
+      "mixStartSec": 169.54,
+      "reasons": [
+        "AI: A leaves at the start of the outro (169.5 s)",
+        "tempos too far apart: blended without beat matching",
+        "B opens quietly: A stays up until B's full level arrives",
+        "basslines swap, drums never double up"
+      ],
+      "filePeakDbtp": -1,
+      "vocalOverlapSec": 0,
+      "metrics": {
+        "truePeakDb": -1,
+        "beforeLufs": -15.8,
+        "afterLufs": -27.3,
+        "loudnessExcursionLu": 0.19,
+        "quietestDb": -33.2,
+        "beatErrorMs": null,
+        "limiterReductionDb": 0.1,
+        "levelerRangeDb": [0, 0]
+      },
+      "checks": {
+        "noClipping": true,
+        "loudness": true,
+        "noGap": true,
+        "beats": null,
+        "vocalsApart": true
+      }
+    },
+    "renderMs": {
+      "before": 1526,
+      "after": 1717
+    }
+  },
+  {
+    "n": 4,
+    "a": "don-toliver-hurt-me-slow",
+    "b": "dorcci-red",
+    "before": {
+      "style": "smooth",
+      "syncBeats": null,
+      "stems": false,
+      "overlapSec": 6,
+      "mixStartSec": 196.85,
+      "reasons": [
+        "A fades out: long smooth crossfade over its fade",
+        "keys clash: crossfade shortened"
+      ],
+      "filePeakDbtp": -5,
+      "vocalOverlapSec": 0,
+      "metrics": {
+        "truePeakDb": -4.9,
+        "beforeLufs": -17.6,
+        "afterLufs": -18.1,
+        "loudnessExcursionLu": 0.51,
+        "quietestDb": -26.7,
+        "beatErrorMs": null,
+        "limiterReductionDb": 0,
+        "levelerRangeDb": [0, 3.8]
+      },
+      "checks": {
+        "noClipping": true,
+        "loudness": true,
+        "noGap": true,
+        "beats": null,
+        "vocalsApart": true
+      }
+    },
+    "after": {
+      "style": "smooth",
+      "syncBeats": null,
+      "stems": true,
+      "overlapSec": 12,
+      "mixStartSec": 181.14,
+      "reasons": [
+        "AI: A leaves at the start of the outro (181.1 s)",
+        "keys clash: blended without beat matching",
+        "A's vocals fade out first",
+        "B's instrumental comes in before its vocals",
+        "B opens quietly: A stays up until B's full level arrives",
+        "basslines swap, drums never double up"
+      ],
+      "filePeakDbtp": -2.1,
+      "vocalOverlapSec": 0,
+      "metrics": {
+        "truePeakDb": -2.1,
+        "beforeLufs": -13.4,
+        "afterLufs": -16.5,
+        "loudnessExcursionLu": 0.37,
+        "quietestDb": -21.6,
+        "beatErrorMs": null,
+        "limiterReductionDb": 0,
+        "levelerRangeDb": [0, 1.6]
+      },
+      "checks": {
+        "noClipping": true,
+        "loudness": true,
+        "noGap": true,
+        "beats": null,
+        "vocalsApart": true
+      }
+    },
+    "renderMs": {
+      "before": 1209,
+      "after": 1912
+    }
+  },
+  {
+    "n": 5,
+    "a": "idk-eminem-welcome",
+    "b": "arshia-pishezton",
+    "before": {
+      "style": "cut",
+      "syncBeats": null,
+      "stems": false,
+      "overlapSec": 0.7,
+      "mixStartSec": 161.22,
+      "reasons": ["hard ending into a cold start: clean cut on the beat"],
+      "filePeakDbtp": -1.4,
+      "vocalOverlapSec": 0,
+      "metrics": {
+        "truePeakDb": -1.4,
+        "beforeLufs": -18,
+        "afterLufs": -15.8,
+        "loudnessExcursionLu": 0.64,
+        "quietestDb": -32.4,
+        "beatErrorMs": null,
+        "limiterReductionDb": 0,
+        "levelerRangeDb": [0, 0.6]
+      },
+      "checks": {
+        "noClipping": true,
+        "loudness": true,
+        "noGap": true,
+        "beats": null,
+        "vocalsApart": true
+      }
+    },
+    "after": {
+      "style": "smooth",
+      "syncBeats": null,
+      "stems": true,
+      "overlapSec": 12,
+      "mixStartSec": 138.9,
+      "reasons": [
+        "AI: A leaves at the start of the verse (138.9 s)",
+        "tempos too far apart: blended without beat matching",
+        "A's vocals fade out first",
+        "B's first vocal line is held back until A's voice is gone",
+        "basslines swap, drums never double up"
+      ],
+      "filePeakDbtp": -2,
+      "vocalOverlapSec": 0,
+      "metrics": {
+        "truePeakDb": -2.1,
+        "beforeLufs": -17.8,
+        "afterLufs": -15.2,
+        "loudnessExcursionLu": 0.56,
+        "quietestDb": -30,
+        "beatErrorMs": null,
+        "limiterReductionDb": 0,
+        "levelerRangeDb": [-1.3, 0]
+      },
+      "checks": {
+        "noClipping": true,
+        "loudness": true,
+        "noGap": true,
+        "beats": null,
+        "vocalsApart": true
+      }
+    },
+    "renderMs": {
+      "before": 882,
+      "after": 1954
+    }
+  },
+  {
+    "n": 6,
+    "a": "night-lovell-sick-tired",
+    "b": "the-percocet-stripper-joint",
+    "before": {
+      "style": "quick",
+      "syncBeats": null,
+      "stems": false,
+      "overlapSec": 3,
+      "mixStartSec": 105.02,
+      "reasons": ["hard ending, keys clash: quick filtered transition"],
+      "filePeakDbtp": -4.3,
+      "vocalOverlapSec": 0,
+      "metrics": {
+        "truePeakDb": -4.3,
+        "beforeLufs": -19.9,
+        "afterLufs": -17.4,
+        "loudnessExcursionLu": 0.77,
+        "quietestDb": -24.4,
+        "beatErrorMs": null,
+        "limiterReductionDb": 0,
+        "levelerRangeDb": [-1.1, 0]
+      },
+      "checks": {
+        "noClipping": true,
+        "loudness": true,
+        "noGap": true,
+        "beats": null,
+        "vocalsApart": true
+      }
+    },
+    "after": {
+      "style": "smooth",
+      "syncBeats": null,
+      "stems": true,
+      "overlapSec": 10.9,
+      "mixStartSec": 97.12,
+      "reasons": [
+        "AI: A leaves at the phrase end (97.1 s)",
+        "tempos too far apart: blended without beat matching",
+        "A's vocals fade out first",
+        "B's instrumental comes in before its vocals",
+        "B opens quietly: A stays up until B's full level arrives",
+        "basslines swap, drums never double up"
+      ],
+      "filePeakDbtp": -1,
+      "vocalOverlapSec": 0,
+      "metrics": {
+        "truePeakDb": -1,
+        "beforeLufs": -11.8,
+        "afterLufs": -13.3,
+        "loudnessExcursionLu": 0.75,
+        "quietestDb": -21.8,
+        "beatErrorMs": null,
+        "limiterReductionDb": 1.8,
+        "levelerRangeDb": [0, 9.9]
+      },
+      "checks": {
+        "noClipping": true,
+        "loudness": true,
+        "noGap": true,
+        "beats": null,
+        "vocalsApart": true
+      }
+    },
+    "renderMs": {
+      "before": 885,
+      "after": 1948
+    }
+  },
+  {
+    "n": 7,
+    "a": "the-percocet-stripper-joint",
+    "b": "don-toliver-hurt-me-slow",
+    "before": {
+      "style": "smooth",
+      "syncBeats": 8,
+      "stems": false,
+      "overlapSec": 6.02,
+      "mixStartSec": 138.12,
+      "reasons": ["A ends with a quiet outro: B comes in over it", "beat-matched over 8 beats"],
+      "filePeakDbtp": -1.2,
+      "vocalOverlapSec": 0.1,
+      "metrics": {
+        "truePeakDb": -1,
+        "beforeLufs": -17.5,
+        "afterLufs": -15.9,
+        "loudnessExcursionLu": 0.69,
+        "quietestDb": -27.5,
+        "beatErrorMs": {
+          "median": 7.3,
+          "p90": 18.9,
+          "beats": 3
+        },
+        "limiterReductionDb": 1,
+        "levelerRangeDb": [-0.6, 2.6]
+      },
+      "checks": {
+        "noClipping": true,
+        "loudness": true,
+        "noGap": true,
+        "beats": true,
+        "vocalsApart": true
+      }
+    },
+    "after": {
+      "style": "smooth",
+      "syncBeats": null,
+      "stems": true,
+      "overlapSec": 11.41,
+      "mixStartSec": 132.14,
+      "reasons": [
+        "AI: A leaves at the start of the outro (132.1 s)",
+        "no steady beat to match: blended",
+        "A's vocals fade out first",
+        "B's instrumental comes in before its vocals",
+        "basslines swap, drums never double up"
+      ],
+      "filePeakDbtp": -2.1,
+      "vocalOverlapSec": 0,
+      "metrics": {
+        "truePeakDb": -2.2,
+        "beforeLufs": -15.6,
+        "afterLufs": -13.8,
+        "loudnessExcursionLu": 0.42,
+        "quietestDb": -34.2,
+        "beatErrorMs": null,
+        "limiterReductionDb": 0,
+        "levelerRangeDb": [0, 0.6]
+      },
+      "checks": {
+        "noClipping": true,
+        "loudness": true,
+        "noGap": true,
+        "beats": null,
+        "vocalsApart": true
+      }
+    },
+    "renderMs": {
+      "before": 1456,
+      "after": 1861
+    }
+  },
+  {
+    "n": 8,
+    "a": "kendrick-lamar-n95",
+    "b": "the-percocet-stripper-joint",
+    "before": {
+      "style": "smooth",
+      "syncBeats": null,
+      "stems": false,
+      "overlapSec": 16.4,
+      "mixStartSec": 187.5,
+      "reasons": [
+        "B's opening plays under A's last full bars",
+        "A ends with a quiet outro: B comes in over it"
+      ],
+      "filePeakDbtp": -2,
+      "vocalOverlapSec": 0,
+      "metrics": {
+        "truePeakDb": -2,
+        "beforeLufs": -16.1,
+        "afterLufs": -12.4,
+        "loudnessExcursionLu": 1.63,
+        "quietestDb": -24.7,
+        "beatErrorMs": null,
+        "limiterReductionDb": 0,
+        "levelerRangeDb": [-0.3, 7.1]
+      },
+      "checks": {
+        "noClipping": true,
+        "loudness": false,
+        "noGap": true,
+        "beats": null,
+        "vocalsApart": true
+      }
+    },
+    "after": {
+      "style": "smooth",
+      "syncBeats": null,
+      "stems": true,
+      "overlapSec": 12,
+      "mixStartSec": 179.54,
+      "reasons": [
+        "AI: A leaves at the start of the outro (179.5 s)",
+        "tempos too far apart: blended without beat matching",
+        "A's vocals fade out first",
+        "B's instrumental comes in before its vocals",
+        "B opens quietly: A stays up until B's full level arrives",
+        "basslines swap, drums never double up"
+      ],
+      "filePeakDbtp": -0.9,
+      "vocalOverlapSec": 0,
+      "metrics": {
+        "truePeakDb": -1,
+        "beforeLufs": -12.6,
+        "afterLufs": -12,
+        "loudnessExcursionLu": 0.65,
+        "quietestDb": -20.4,
+        "beatErrorMs": null,
+        "limiterReductionDb": 1.3,
+        "levelerRangeDb": [-1.4, 10.6]
+      },
+      "checks": {
+        "noClipping": true,
+        "loudness": true,
+        "noGap": true,
+        "beats": null,
+        "vocalsApart": true
+      }
+    },
+    "renderMs": {
+      "before": 1694,
+      "after": 2296
+    }
+  },
+  {
+    "n": 9,
+    "a": "dorcci-red",
+    "b": "idk-eminem-welcome",
+    "before": {
+      "style": "smooth",
+      "syncBeats": null,
+      "stems": false,
+      "overlapSec": 4,
+      "mixStartSec": 170.55,
+      "reasons": ["A ends with a quiet outro: B comes in over it"],
+      "filePeakDbtp": -2.9,
+      "vocalOverlapSec": 0,
+      "metrics": {
+        "truePeakDb": -3,
+        "beforeLufs": -15.4,
+        "afterLufs": -16.9,
+        "loudnessExcursionLu": 0.49,
+        "quietestDb": -28.8,
+        "beatErrorMs": null,
+        "limiterReductionDb": 0,
+        "levelerRangeDb": [0, 4.3]
+      },
+      "checks": {
+        "noClipping": true,
+        "loudness": true,
+        "noGap": true,
+        "beats": null,
+        "vocalsApart": true
+      }
+    },
+    "after": {
+      "style": "smooth",
+      "syncBeats": null,
+      "stems": true,
+      "overlapSec": 8.77,
+      "mixStartSec": 161.98,
+      "reasons": [
+        "AI: A leaves at the start of the outro (162.0 s)",
+        "keys clash: blended without beat matching",
+        "A's vocals fade out first",
+        "B's first vocal line is held back until A's voice is gone",
+        "basslines swap, drums never double up"
+      ],
+      "filePeakDbtp": -1.6,
+      "vocalOverlapSec": 0,
+      "metrics": {
+        "truePeakDb": -1.6,
+        "beforeLufs": -13.7,
+        "afterLufs": -14.6,
+        "loudnessExcursionLu": 0.6,
+        "quietestDb": -25.1,
+        "beatErrorMs": null,
+        "limiterReductionDb": 0,
+        "levelerRangeDb": [0, 1.6]
+      },
+      "checks": {
+        "noClipping": true,
+        "loudness": true,
+        "noGap": true,
+        "beats": null,
+        "vocalsApart": true
+      }
+    },
+    "renderMs": {
+      "before": 1140,
+      "after": 1843
+    }
+  },
+  {
+    "n": 10,
+    "a": "kodak-black-tunnel-vision",
+    "b": "night-lovell-sick-tired",
+    "before": {
+      "style": "smooth",
+      "syncBeats": null,
+      "stems": false,
+      "overlapSec": 20,
+      "mixStartSec": 245.3,
+      "reasons": [
+        "B's quiet intro starts early, under A",
+        "B's opening plays under A's last full bars",
+        "A ends with a quiet outro: B comes in over it"
+      ],
+      "filePeakDbtp": -1.3,
+      "vocalOverlapSec": 0,
+      "metrics": {
+        "truePeakDb": -1.3,
+        "beforeLufs": -13.1,
+        "afterLufs": -18.7,
+        "loudnessExcursionLu": 1.32,
+        "quietestDb": -27.3,
+        "beatErrorMs": null,
+        "limiterReductionDb": 0,
+        "levelerRangeDb": [0, 7.4]
+      },
+      "checks": {
+        "noClipping": true,
+        "loudness": false,
+        "noGap": true,
+        "beats": null,
+        "vocalsApart": true
+      }
+    },
+    "after": {
+      "style": "smooth",
+      "syncBeats": null,
+      "stems": true,
+      "overlapSec": 12,
+      "mixStartSec": 242.32,
+      "reasons": [
+        "AI: A leaves at the start of the outro (242.3 s)",
+        "tempos too far apart: blended without beat matching",
+        "A's vocals fade out first",
+        "B's instrumental comes in before its vocals",
+        "B opens quietly: A stays up until B's full level arrives",
+        "basslines swap, drums never double up"
+      ],
+      "filePeakDbtp": -3,
+      "vocalOverlapSec": 0,
+      "metrics": {
+        "truePeakDb": -2.9,
+        "beforeLufs": -13.2,
+        "afterLufs": -25.1,
+        "loudnessExcursionLu": 0.41,
+        "quietestDb": -30.9,
+        "beatErrorMs": null,
+        "limiterReductionDb": 0,
+        "levelerRangeDb": [-0.8, 0]
+      },
+      "checks": {
+        "noClipping": true,
+        "loudness": true,
+        "noGap": true,
+        "beats": null,
+        "vocalsApart": true
+      }
+    },
+    "renderMs": {
+      "before": 1906,
+      "after": 2200
+    }
+  }
+]

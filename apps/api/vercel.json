@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "cd ../.. && pnpm turbo run build --filter=@radiot/api...",
+  "outputDirectory": "public",
+  "functions": {
+    "api/index.mjs": { "maxDuration": 300 }
+  },
+  "rewrites": [{ "source": "/(.*)", "destination": "/api/index.mjs" }]
+}

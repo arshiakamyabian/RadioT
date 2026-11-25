@@ -1,0 +1,2 @@
+# Built against the torch/cython from requirements.txt (no build isolation).
+madmom @ git+https://github.com/CPJKU/madmom

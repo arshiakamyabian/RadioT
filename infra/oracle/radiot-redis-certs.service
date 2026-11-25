@@ -1,0 +1,5 @@
+[Unit]
+Description=Refresh Redis TLS cert from Caddy
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/radiot-redis-certs

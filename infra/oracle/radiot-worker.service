@@ -1,0 +1,15 @@
+[Unit]
+Description=RadioT media worker (ingest, AI analysis, transition clips)
+After=network-online.target
+Wants=network-online.target
+[Service]
+User=ubuntu
+WorkingDirectory=/opt/radiot/apps/worker
+EnvironmentFile=/opt/radiot/apps/worker/.env
+EnvironmentFile=-/opt/radiot/apps/worker/.env.blob
+ExecStart=/usr/bin/node dist/index.js
+Restart=always
+RestartSec=3
+Nice=5
+[Install]
+WantedBy=multi-user.target

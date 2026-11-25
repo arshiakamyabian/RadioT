@@ -1,0 +1,467 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Receiver palette: warm charcoal chassis, one amber "backlight" accent, red ON AIR lamp.
+ * Contrast pairs checked for WCAG AA: foreground/muted-foreground on background and card,
+ * primary-foreground on primary.
+ */
+/* Accent hue follows the on-air artwork (components/ambient.tsx); 72 = RadioT amber. */
+@property --dyn-h {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 72;
+}
+
+:root {
+  --dyn-h: 72;
+  transition: --dyn-h 1.6s ease;
+  --background: oklch(0.155 0.006 75);
+  --foreground: oklch(0.96 0.01 85);
+  --card: oklch(0.19 0.007 75);
+  --card-foreground: oklch(0.96 0.01 85);
+  --muted: oklch(0.24 0.008 75);
+  --muted-foreground: oklch(0.74 0.012 80);
+  --primary: oklch(0.82 0.15 var(--dyn-h));
+  --primary-foreground: oklch(0.17 0.01 75);
+  --accent: oklch(0.82 0.15 var(--dyn-h));
+  --accent-foreground: oklch(0.17 0.01 75);
+  --brand: oklch(0.84 0.14 var(--dyn-h));
+  --live: oklch(0.68 0.21 28);
+  --destructive: oklch(0.7 0.19 28);
+  --border: oklch(0.29 0.008 75);
+  --input: oklch(0.32 0.008 75);
+  --ring: oklch(0.84 0.14 var(--dyn-h));
+  --radius: 0.875rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-brand: var(--brand);
+  --color-live: var(--live);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, 'SF Mono', Menlo, monospace;
+}
+
+@layer base {
+  /* Keep focused/scrolled-to elements clear of the sticky header and fixed player (WCAG 2.4.11). */
+  html {
+    scroll-padding-top: 6rem;
+    scroll-padding-bottom: 6rem;
+  }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+  ::selection {
+    background: oklch(0.82 0.15 var(--dyn-h) / 0.35);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* The standard panel. (Named `glass` for history; it is a flat hairline panel now.) */
+@utility glass {
+  background-color: oklch(0.19 0.007 75 / 0.62);
+  border: 1px solid oklch(1 0 0 / 0.08);
+  border-radius: 1.25rem;
+  box-shadow:
+    inset 0 1px 0 oklch(1 0 0 / 0.06),
+    0 30px 60px -40px oklch(0 0 0 / 0.9);
+  backdrop-filter: blur(22px) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  /* Phones: backdrop blur on many layers made scrolling stutter; use a near-solid panel instead. */
+  @media (max-width: 639px) {
+    background-color: oklch(0.18 0.007 75 / 0.96);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+/* Solid accent fill. Kept under the old name so every caller picks up the new look. */
+@utility brand-gradient {
+  background-image: linear-gradient(
+    135deg,
+    oklch(0.88 0.13 calc(var(--dyn-h) + 12)),
+    var(--primary) 55%,
+    oklch(0.74 0.16 calc(var(--dyn-h) - 18))
+  );
+  color: var(--primary-foreground);
+}
+
+/* Small uppercase mono label, like the legends printed on a receiver's faceplate. */
+@utility legend {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+/* Backlit display text. */
+@utility lcd {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  color: var(--brand);
+  text-shadow: 0 0 12px oklch(0.82 0.15 var(--dyn-h) / 0.45);
+}
+
+@keyframes eq {
+  0%,
+  100% {
+    transform: scaleY(0.25);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+@utility eq-bar {
+  transform-origin: bottom;
+  animation: eq 1s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@utility marquee {
+  animation: marquee 18s linear infinite;
+}
+
+@keyframes lamp {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+@utility lamp-pulse {
+  animation: lamp 2.4s ease-in-out infinite;
+}
+
+/* Tune-in entrance (components/tune-in-gate.tsx) */
+html.gate-open {
+  overflow: hidden;
+}
+.tune-gate {
+  background:
+    radial-gradient(120% 80% at 50% 110%, oklch(0.3 0.09 60 / 0.55), transparent 60%),
+    oklch(0.12 0.006 75 / 0.72);
+}
+@keyframes tune-gate-out {
+  to {
+    clip-path: inset(50% 0 50% 0);
+    opacity: 0.2;
+  }
+}
+.tune-gate-out {
+  clip-path: inset(0 0 0 0);
+  animation: tune-gate-out 1s cubic-bezier(0.7, 0, 0.2, 1) forwards;
+}
+@keyframes tune-blink {
+  50% {
+    opacity: 0.25;
+  }
+}
+.tune-blink {
+  animation: tune-blink 1.6s steps(2) infinite;
+}
+@keyframes tune-ring {
+  from {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  to {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+.tune-button::before,
+.tune-button::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 9999px;
+  border: 2px solid oklch(0.82 0.15 var(--dyn-h) / 0.55);
+  animation: tune-ring 2.4s ease-out infinite;
+  pointer-events: none;
+}
+.tune-button::after {
+  animation-delay: 1.2s;
+}
+@keyframes tune-flicker {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  30% {
+    opacity: 0.2;
+  }
+  45% {
+    opacity: 0.7;
+  }
+  60% {
+    opacity: 0.1;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.tune-flash {
+  background: radial-gradient(circle at 50% 50%, oklch(0.9 0.1 80 / 0.25), transparent 60%);
+  animation: tune-flicker 0.9s steps(6) forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tune-gate-out {
+    animation: none;
+    opacity: 0;
+  }
+  .tune-blink,
+  .tune-button::before,
+  .tune-button::after {
+    animation: none;
+  }
+}
+
+/* ---------- Ambient stage lighting (components/ambient.tsx) ---------- */
+@keyframes aurora-a {
+  0%,
+  100% {
+    transform: translate3d(-8%, -6%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(10%, 8%, 0) scale(1.15);
+  }
+}
+@keyframes aurora-b {
+  0%,
+  100% {
+    transform: translate3d(12%, 4%, 0) scale(1.1);
+  }
+  50% {
+    transform: translate3d(-10%, -8%, 0) scale(0.95);
+  }
+}
+.aurora {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.aurora > i {
+  position: absolute;
+  width: 70vmax;
+  height: 70vmax;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.32;
+}
+.aurora > i:nth-child(1) {
+  top: -35vmax;
+  left: -15vmax;
+  background: radial-gradient(circle, oklch(0.7 0.17 var(--dyn-h)), transparent 65%);
+  animation: aurora-a 28s ease-in-out infinite;
+}
+.aurora > i:nth-child(2) {
+  top: -25vmax;
+  right: -30vmax;
+  background: radial-gradient(circle, oklch(0.6 0.2 calc(var(--dyn-h) + 60)), transparent 65%);
+  opacity: 0.22;
+  animation: aurora-b 34s ease-in-out infinite;
+}
+.aurora > i:nth-child(3) {
+  bottom: -45vmax;
+  left: 20vmax;
+  background: radial-gradient(circle, oklch(0.55 0.18 calc(var(--dyn-h) - 50)), transparent 65%);
+  opacity: 0.16;
+  animation: aurora-a 40s ease-in-out infinite reverse;
+}
+.aurora::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* ---------- Scroll-driven reveal (progressive: no-op where unsupported) ---------- */
+@keyframes reveal {
+  from {
+    opacity: 0.35;
+    transform: translateY(28px) scale(0.98);
+  }
+}
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 35%;
+  }
+}
+
+/* ---------- View transitions between tracks ---------- */
+::view-transition-old(np-cover),
+::view-transition-new(np-cover) {
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+::view-transition-old(np-title) {
+  animation: 0.35s ease both vt-out;
+}
+::view-transition-new(np-title) {
+  animation: 0.5s 0.15s cubic-bezier(0.2, 0.8, 0.2, 1) both vt-in;
+}
+@keyframes vt-out {
+  to {
+    opacity: 0;
+    transform: translateY(-14px);
+    filter: blur(6px);
+  }
+}
+@keyframes vt-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(8px);
+  }
+}
+
+/* ---------- Spinning record behind the cover, equalizer, sheen ---------- */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.vinyl {
+  background:
+    radial-gradient(
+      circle,
+      var(--primary) 0 15%,
+      oklch(0.12 0.005 75) 15.5% 17%,
+      transparent 17.5%
+    ),
+    repeating-radial-gradient(circle, oklch(0.13 0.005 75) 0 2px, oklch(0.18 0.006 75) 2px 3.5px);
+  box-shadow:
+    0 0 0 1px oklch(1 0 0 / 0.06),
+    0 20px 50px -20px oklch(0 0 0 / 0.9);
+  animation: spin 2.4s linear infinite;
+  animation-play-state: paused;
+}
+.vinyl[data-playing='true'] {
+  animation-play-state: running;
+}
+.vinyl::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 30deg,
+    transparent 0 10%,
+    oklch(1 0 0 / 0.12) 14%,
+    transparent 20% 60%,
+    oklch(1 0 0 / 0.08) 64%,
+    transparent 70%
+  );
+}
+.text-shine {
+  background: linear-gradient(
+    100deg,
+    var(--foreground) 30%,
+    oklch(0.92 0.09 var(--dyn-h)) 50%,
+    var(--foreground) 70%
+  );
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shine 7s linear infinite;
+}
+@keyframes shine {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -150% 0;
+  }
+}
+.sheen {
+  position: relative;
+  overflow: hidden;
+}
+.sheen::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 35%, oklch(1 0 0 / 0.35) 50%, transparent 65%);
+  transform: translateX(-120%);
+  transition: transform 0.7s ease;
+  pointer-events: none;
+}
+.sheen:hover::after {
+  transform: translateX(120%);
+}
+
+/* Phones: keep the lighting, skip animating three huge blurred layers. */
+@media (max-width: 639px) {
+  .aurora > i {
+    animation: none;
+    filter: blur(60px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora > i,
+  .vinyl,
+  .text-shine,
+  .reveal {
+    animation: none !important;
+  }
+  :root {
+    transition: none;
+  }
+}

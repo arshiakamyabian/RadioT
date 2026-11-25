@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "cd ../.. && pnpm turbo run build --filter=@radiot/worker...",
+  "outputDirectory": "public",
+  "functions": {
+    "api/media.mjs": { "maxDuration": 300, "includeFiles": "vendor/**" }
+  }
+}

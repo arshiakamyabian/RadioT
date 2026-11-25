@@ -1,0 +1,34 @@
+node_modules/
+dist/
+build/
+.next/
+.turbo/
+coverage/
+out/
+*.tsbuildinfo
+.env
+.env.local
+.env.*.local
+!.env.example
+content/fallback/*
+!content/fallback/.gitkeep
+# The one default song that loops when nobody has uploaded anything.
+!content/fallback/default.mp3
+# User uploads never live on disk (they go to Vercel Blob); ignore any local stray copies.
+uploads/
+*.log
+playwright-report/
+test-results/
+.DS_Store
+next-env.d.ts
+.tmp/
+apps/worker/vendor/
+.vercel
+apps/worker/scripts/scratch/
+# Rendered sample transitions contain excerpts of copyrighted songs: keep them out of git.
+docs/transitions/samples/**/*.mp3
+docs/transitions/ai-samples/*.mp3
+
+# stream engine work folder (media cache, HLS segments, logs)
+apps/engine/run/
+.tmp/

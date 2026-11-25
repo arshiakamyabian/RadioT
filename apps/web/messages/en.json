@@ -1,0 +1,210 @@
+{
+  "Meta": {
+    "homeTitle": "RadioT — live community radio",
+    "homeDescription": "A 24/7 live radio where the community requests songs and votes on what plays next.",
+    "signInTitle": "Sign in",
+    "chartsTitle": "Weekly chart",
+    "chartsDescription": "The most-voted community requests on RadioT this week.",
+    "historyTitle": "\"{title}\" on RadioT",
+    "historyDescription": "Requested by {name} on RadioT, the community radio where listeners vote on what plays next.",
+    "profileTitle": "{name} on RadioT",
+    "profileDescription": "{name}'s requests and wins on RadioT community radio.",
+    "settingsTitle": "Your profile",
+    "adminTitle": "Admin",
+    "recentTitle": "Recently played",
+    "requestTitle": "Request a song"
+  },
+  "Nav": {
+    "home": "Live",
+    "charts": "Charts",
+    "recent": "Recent",
+    "admin": "Admin",
+    "profile": "Profile",
+    "skip": "Skip to content",
+    "language": "Türkçe",
+    "request": "Request a song"
+  },
+  "Home": {
+    "tagline": "Community radio. You pick what plays next.",
+    "live": "Live",
+    "signIn": "Sign in",
+    "signedInAs": "Signed in as {email}",
+    "signOut": "Sign out",
+    "onAir": "On air"
+  },
+  "Player": {
+    "play": "Play live radio",
+    "pause": "Pause",
+    "loading": "Connecting…",
+    "buffering": "Buffering…",
+    "offline": "You're offline",
+    "error": "Stream unavailable — retrying",
+    "listeners": "{count, plural, =0 {No listeners yet} one {# listening} other {# listening}}",
+    "mute": "Mute",
+    "unmute": "Unmute",
+    "volume": "Volume",
+    "nowPlaying": "Now playing",
+    "requestedBy": "Requested by {name}",
+    "fallback": "Station rotation",
+    "offAir": "Starting up…",
+    "tunedIn": "tuned in",
+    "onRequest": "On request"
+  },
+  "Vote": {
+    "title": "Vote for what plays next",
+    "locked": "Voting closed — next song is locked in",
+    "empty": "No requests yet. Be the first!",
+    "vote": "Vote",
+    "voted": "Your vote",
+    "votes": "{count, plural, =0 {No votes} one {# vote} other {# votes}}",
+    "signInToVote": "Sign in to vote",
+    "share": "Share",
+    "copied": "Link copied!",
+    "winner": "Up next: {title}",
+    "voteNow": "Vote",
+    "votingClosed": "Locked",
+    "nextOpens": "Voting for the next song opens when this one starts.",
+    "requestCta": "Request a song",
+    "emptyHint": "Upload a song and it joins this vote — the winner plays next.",
+    "eyebrow": "Up next",
+    "open": "Voting open",
+    "closesNote": "Voting closes 10 seconds before the song ends. The most-voted song plays next.",
+    "newTitle": "New requests"
+  },
+  "Request": {
+    "open": "Request a song",
+    "title": "Request a song",
+    "upload": "Upload a file",
+    "link": "Paste a link",
+    "file": "Audio or music video (MP3, M4A, FLAC, WAV, OGG, MP4 · up to {mb} MB, 10 min)",
+    "url": "YouTube, SoundCloud, Spotify or audio link",
+    "urlHint": "Paste a YouTube, SoundCloud or Spotify song link, or a direct link to an audio file. YouTube and Spotify songs are fetched from SoundCloud, so a song that isn't on SoundCloud can't be added this way. Apple Music links are not supported.",
+    "rights": "I own this recording or have the rights to broadcast it, and I accept responsibility for it.",
+    "submit": "Submit request",
+    "submitting": "Uploading… {pct}%",
+    "processing": "Processing your audio…",
+    "done": "Your song is in the vote!",
+    "mine": "Your requests",
+    "withdraw": "Withdraw",
+    "cancel": "Close",
+    "signIn": "Sign in to request a song",
+    "status": {
+      "pending_upload": "Uploading",
+      "ingesting": "Preparing for the mix (~3 min)",
+      "ready": "In the vote",
+      "queued": "Up next",
+      "playing": "On air",
+      "played": "Played",
+      "rejected": "Rejected",
+      "expired": "In rotation"
+    },
+    "intro": "Upload an audio file or paste a YouTube, SoundCloud, Spotify or audio link. Once it's processed it joins the vote — share it so people vote for it!",
+    "badType": "That file type isn’t supported. Use MP3, M4A, AAC, FLAC, OGG, WAV or MP4.",
+    "tooBig": "That file is over {mb} MB.",
+    "uploadFailed": "The upload didn’t go through. Check your connection and try again.",
+    "sending": "Sending to the studio…",
+    "lineEyebrow": "Request line",
+    "lineTitle": "Put your track on air",
+    "lineBody": "Upload a song. The crowd votes on what plays next."
+  },
+  "Toast": {
+    "ready": "\"{title}\" is ready and in the vote!",
+    "rejected": "\"{title}\" was rejected: {reason}",
+    "won": "\"{title}\" won! It plays next.",
+    "live": "\"{title}\" is on air now!",
+    "expired": "\"{title}\" didn't win the vote, but it stays in the rotation."
+  },
+  "Stage": {
+    "title": "On stage",
+    "goLive": "Go live on camera",
+    "stop": "Leave stage",
+    "liveNow": "{name} is live",
+    "noMic": "Camera only — your microphone is never used.",
+    "ageGate": "I confirm I am 18 or older and agree to keep my stream appropriate.",
+    "confirm": "Start camera",
+    "report": "Report stream",
+    "notConfigured": "Live video is not available right now.",
+    "cameraError": "Couldn't access your camera.",
+    "youreLive": "You're live"
+  },
+  "Chat": {
+    "title": "Chat",
+    "placeholder": "Say something nice…",
+    "send": "Send",
+    "signIn": "Sign in to chat",
+    "report": "Report",
+    "delete": "Delete",
+    "empty": "No messages yet.",
+    "eyebrow": "Live"
+  },
+  "Reactions": {
+    "label": "React live",
+    "you": "You",
+    "crowd": "Crowd",
+    "stickers": {
+      "fire": "Fire",
+      "airhorn": "Air horn",
+      "rewind": "Run it back"
+    }
+  },
+  "Charts": {
+    "title": "This week's chart",
+    "empty": "No songs have played this week yet.",
+    "votes": "{count, plural, one {# vote} other {# votes}}"
+  },
+  "History": {
+    "requestedBy": "Requested by",
+    "playedAt": "Played {date}",
+    "status": "Status",
+    "voteForMe": "Vote for this song on RadioT",
+    "listen": "Listen live"
+  },
+  "Profile": {
+    "played": "{count, plural, =0 {No songs played yet} one {# song played} other {# songs played}}",
+    "requests": "Requests",
+    "memberSince": "Member since {date}",
+    "handle": "Handle",
+    "displayName": "Display name",
+    "bio": "Bio",
+    "save": "Save",
+    "saved": "Saved",
+    "adult": "I am 18 or older (required to go live on camera)",
+    "notifications": "Notify me when my song wins or goes live",
+    "notificationsUnsupported": "Notifications aren't supported in this browser.",
+    "viewPublic": "View public profile"
+  },
+  "SignIn": {
+    "heading": "Sign in to RadioT",
+    "subheading": "We'll email you a magic link. No password needed.",
+    "email": "Email address",
+    "submit": "Send magic link",
+    "sending": "Sending…",
+    "sent": "Check your inbox — we sent a sign-in link to {email}.",
+    "error": "Something went wrong. Please try again.",
+    "or": "or",
+    "google": "Continue with Google",
+    "back": "Back to the station"
+  },
+  "Common": {
+    "error": "Something went wrong.",
+    "loading": "Loading…",
+    "signInRequired": "Please sign in first."
+  },
+  "Rotation": {
+    "eyebrow": "Always on air",
+    "title": "Rotation · {count, plural, one {# song} other {# songs}}",
+    "body": "Every uploaded song loops here. Vote to play one next; with no votes, the top of the list comes back next.",
+    "upNext": "Comes back next"
+  },
+  "TuneIn": {
+    "title": "Everyone hears it <em>right now.</em>",
+    "nowOnAir": "Now on air",
+    "requestedAt": "requested by {name} · {time} in",
+    "rotationAt": "station rotation · {time} in",
+    "button": "TUNE IN",
+    "listening": "{count, plural, one {listening with you} other {listening with you}}",
+    "beFirst": "Be the first one tuned in.",
+    "note": "Request a song, vote on what plays next, and go live on camera when your track is on.",
+    "browse": "Look around without sound"
+  }
+}

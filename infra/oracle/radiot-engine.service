@@ -1,0 +1,13 @@
+[Unit]
+Description=RadioT stream engine
+After=network-online.target
+Wants=network-online.target
+[Service]
+User=ubuntu
+WorkingDirectory=/opt/radiot/apps/engine
+EnvironmentFile=/opt/radiot/apps/engine/.env
+ExecStart=/usr/bin/node dist/index.js
+Restart=always
+RestartSec=3
+[Install]
+WantedBy=multi-user.target

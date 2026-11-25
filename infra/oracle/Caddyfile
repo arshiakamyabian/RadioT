@@ -1,0 +1,21 @@
+{
+	https_port 8443
+	auto_https disable_redirects
+}
+http://130-61-178-247.sslip.io {
+	handle /.well-known/acme-challenge/* {
+		respond 404
+	}
+	redir https://130-61-178-247.sslip.io{uri} permanent
+}
+130-61-178-247.sslip.io {
+	encode zstd gzip
+	handle /api/media* {
+		reverse_proxy 127.0.0.1:4100
+	}
+	handle {
+		reverse_proxy 127.0.0.1:4200 {
+			flush_interval -1
+		}
+	}
+}

@@ -1,0 +1,210 @@
+{
+  "Meta": {
+    "homeTitle": "RadioT — canlı topluluk radyosu",
+    "homeDescription": "Topluluğun şarkı istediği ve sıradaki şarkıyı oyladığı 7/24 canlı radyo.",
+    "signInTitle": "Giriş yap",
+    "chartsTitle": "Haftalık liste",
+    "chartsDescription": "Bu hafta RadioT'de en çok oy alan topluluk istekleri.",
+    "historyTitle": "RadioT'de \"{title}\"",
+    "historyDescription": "{name} tarafından RadioT'de istendi — dinleyicilerin sıradaki şarkıyı oyladığı topluluk radyosu.",
+    "profileTitle": "RadioT'de {name}",
+    "profileDescription": "{name} kullanıcısının RadioT'deki istekleri ve kazandıkları.",
+    "settingsTitle": "Profilin",
+    "adminTitle": "Yönetim",
+    "recentTitle": "Son çalınanlar",
+    "requestTitle": "Şarkı iste"
+  },
+  "Nav": {
+    "home": "Canlı",
+    "charts": "Liste",
+    "recent": "Son çalınanlar",
+    "admin": "Yönetim",
+    "profile": "Profil",
+    "skip": "İçeriğe geç",
+    "language": "English",
+    "request": "Şarkı iste"
+  },
+  "Home": {
+    "tagline": "Topluluk radyosu. Sıradaki şarkıyı sen seç.",
+    "live": "Canlı",
+    "signIn": "Giriş yap",
+    "signedInAs": "{email} olarak giriş yapıldı",
+    "signOut": "Çıkış yap",
+    "onAir": "Yayında"
+  },
+  "Player": {
+    "play": "Canlı radyoyu çal",
+    "pause": "Duraklat",
+    "loading": "Bağlanıyor…",
+    "buffering": "Arabelleğe alınıyor…",
+    "offline": "Çevrimdışısın",
+    "error": "Yayına ulaşılamıyor — yeniden deneniyor",
+    "listeners": "{count, plural, =0 {Henüz dinleyen yok} other {# kişi dinliyor}}",
+    "mute": "Sesi kapat",
+    "unmute": "Sesi aç",
+    "volume": "Ses düzeyi",
+    "nowPlaying": "Şimdi çalıyor",
+    "requestedBy": "İsteyen: {name}",
+    "fallback": "İstasyon listesi",
+    "offAir": "Başlıyor…",
+    "tunedIn": "dinliyor",
+    "onRequest": "İstek üzerine"
+  },
+  "Vote": {
+    "title": "Sıradaki şarkıyı oyla",
+    "locked": "Oylama kapandı — sıradaki şarkı belli oldu",
+    "empty": "Henüz istek yok. İlk sen ol!",
+    "vote": "Oy ver",
+    "voted": "Oyun",
+    "votes": "{count, plural, =0 {Oy yok} other {# oy}}",
+    "signInToVote": "Oy vermek için giriş yap",
+    "share": "Paylaş",
+    "copied": "Bağlantı kopyalandı!",
+    "winner": "Sırada: {title}",
+    "voteNow": "Oy ver",
+    "votingClosed": "Kapandı",
+    "nextOpens": "Sıradaki şarkının oylaması bu şarkı başlayınca açılır.",
+    "requestCta": "Şarkı iste",
+    "emptyHint": "Bir şarkı yükle, bu oylamaya girsin — kazanan sıradaki çalar.",
+    "eyebrow": "Sıradaki",
+    "open": "Oylama açık",
+    "closesNote": "Oylama şarkı bitmeden 10 saniye önce kapanır. En çok oy alan şarkı sıradaki çalar.",
+    "newTitle": "Yeni istekler"
+  },
+  "Request": {
+    "open": "Şarkı iste",
+    "title": "Şarkı iste",
+    "upload": "Dosya yükle",
+    "link": "Bağlantı yapıştır",
+    "file": "Ses veya müzik videosu (MP3, M4A, FLAC, WAV, OGG, MP4 · en fazla {mb} MB, 10 dk)",
+    "url": "YouTube, SoundCloud, Spotify veya ses bağlantısı",
+    "urlHint": "Bir YouTube, SoundCloud veya Spotify şarkı bağlantısı ya da bir ses dosyasına doğrudan bağlantı yapıştır. YouTube ve Spotify şarkıları SoundCloud'dan alınır; SoundCloud'da olmayan bir şarkı bu yolla eklenemez. Apple Music bağlantıları desteklenmiyor.",
+    "rights": "Bu kaydın sahibiyim ya da yayınlama hakkına sahibim ve sorumluluğunu kabul ediyorum.",
+    "submit": "İsteği gönder",
+    "submitting": "Yükleniyor… %{pct}",
+    "processing": "Ses dosyan işleniyor…",
+    "done": "Şarkın oylamada!",
+    "mine": "İsteklerin",
+    "withdraw": "Geri çek",
+    "cancel": "Kapat",
+    "signIn": "Şarkı istemek için giriş yap",
+    "status": {
+      "pending_upload": "Yükleniyor",
+      "ingesting": "Miks için hazırlanıyor (~3 dk)",
+      "ready": "Oylamada",
+      "queued": "Sırada",
+      "playing": "Yayında",
+      "played": "Çalındı",
+      "rejected": "Reddedildi",
+      "expired": "Rotasyonda"
+    },
+    "intro": "Bir ses dosyası yükle ya da YouTube, SoundCloud, Spotify veya ses bağlantısı yapıştır. İşlendikten sonra oylamaya girer — oy alması için paylaş!",
+    "badType": "Bu dosya türü desteklenmiyor. MP3, M4A, AAC, FLAC, OGG, WAV veya MP4 kullanın.",
+    "tooBig": "Bu dosya {mb} MB’ı aşıyor.",
+    "uploadFailed": "Yükleme tamamlanamadı. Bağlantınızı kontrol edip tekrar deneyin.",
+    "sending": "Stüdyoya gönderiliyor…",
+    "lineEyebrow": "İstek hattı",
+    "lineTitle": "Şarkını yayına taşı",
+    "lineBody": "Bir şarkı yükle. Sıradakini dinleyiciler oylar."
+  },
+  "Toast": {
+    "ready": "\"{title}\" hazır ve oylamada!",
+    "rejected": "\"{title}\" reddedildi: {reason}",
+    "won": "\"{title}\" kazandı! Sıradaki şarkı o.",
+    "live": "\"{title}\" şu an yayında!",
+    "expired": "\"{title}\" oylamayı kazanamadı ama rotasyonda çalmaya devam edecek."
+  },
+  "Stage": {
+    "title": "Sahnede",
+    "goLive": "Kamerayla canlı yayına çık",
+    "stop": "Sahneden in",
+    "liveNow": "{name} canlı yayında",
+    "noMic": "Sadece kamera — mikrofonun asla kullanılmaz.",
+    "ageGate": "18 yaşından büyük olduğumu ve yayınımı uygun tutacağımı onaylıyorum.",
+    "confirm": "Kamerayı başlat",
+    "report": "Yayını bildir",
+    "notConfigured": "Canlı video şu an kullanılamıyor.",
+    "cameraError": "Kameraya erişilemedi.",
+    "youreLive": "Yayındasın"
+  },
+  "Chat": {
+    "title": "Sohbet",
+    "placeholder": "Güzel bir şey yaz…",
+    "send": "Gönder",
+    "signIn": "Sohbet için giriş yap",
+    "report": "Bildir",
+    "delete": "Sil",
+    "empty": "Henüz mesaj yok.",
+    "eyebrow": "Canlı"
+  },
+  "Reactions": {
+    "label": "Canlı tepki ver",
+    "you": "Sen",
+    "crowd": "Kalabalık",
+    "stickers": {
+      "fire": "Ateş",
+      "airhorn": "Korna",
+      "rewind": "Bir daha"
+    }
+  },
+  "Charts": {
+    "title": "Bu haftanın listesi",
+    "empty": "Bu hafta henüz şarkı çalınmadı.",
+    "votes": "{count, plural, other {# oy}}"
+  },
+  "History": {
+    "requestedBy": "İsteyen",
+    "playedAt": "Çalınma: {date}",
+    "status": "Durum",
+    "voteForMe": "RadioT'de bu şarkıya oy ver",
+    "listen": "Canlı dinle"
+  },
+  "Profile": {
+    "played": "{count, plural, =0 {Henüz çalınan şarkı yok} other {# şarkı çalındı}}",
+    "requests": "İstekler",
+    "memberSince": "Üyelik: {date}",
+    "handle": "Kullanıcı adı",
+    "displayName": "Görünen ad",
+    "bio": "Hakkında",
+    "save": "Kaydet",
+    "saved": "Kaydedildi",
+    "adult": "18 yaşından büyüğüm (kamerayla yayına çıkmak için gerekli)",
+    "notifications": "Şarkım kazandığında veya yayına girdiğinde bildir",
+    "notificationsUnsupported": "Bu tarayıcı bildirimleri desteklemiyor.",
+    "viewPublic": "Herkese açık profili gör"
+  },
+  "SignIn": {
+    "heading": "RadioT'ye giriş yap",
+    "subheading": "Sana sihirli bir bağlantı göndereceğiz. Şifre gerekmez.",
+    "email": "E-posta adresi",
+    "submit": "Bağlantıyı gönder",
+    "sending": "Gönderiliyor…",
+    "sent": "Gelen kutunu kontrol et — {email} adresine bir giriş bağlantısı gönderdik.",
+    "error": "Bir şeyler ters gitti. Lütfen tekrar dene.",
+    "or": "veya",
+    "google": "Google ile devam et",
+    "back": "İstasyona dön"
+  },
+  "Common": {
+    "error": "Bir şeyler ters gitti.",
+    "loading": "Yükleniyor…",
+    "signInRequired": "Lütfen önce giriş yap."
+  },
+  "Rotation": {
+    "eyebrow": "Hep yayında",
+    "title": "Rotasyon · {count} şarkı",
+    "body": "Yüklenen her şarkı burada döner. Sıradaki çalsın diye birine oy ver; oy yoksa listenin başı çalar.",
+    "upNext": "Sıradaki"
+  },
+  "TuneIn": {
+    "title": "Herkes <em>şu an</em> aynı şarkıyı dinliyor.",
+    "nowOnAir": "Şu an yayında",
+    "requestedAt": "{name} istedi · {time}",
+    "rotationAt": "istasyon listesi · {time}",
+    "button": "DİNLE",
+    "listening": "{count, plural, one {kişi seninle dinliyor} other {kişi seninle dinliyor}}",
+    "beFirst": "İlk dinleyen sen ol.",
+    "note": "Şarkı iste, sıradakine oy ver ve şarkın çalarken kamerada canlı yayına çık.",
+    "browse": "Sessizce göz at"
+  }
+}
